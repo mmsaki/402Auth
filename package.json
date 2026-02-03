@@ -1,8 +1,39 @@
 {
   "name": "402auth",
   "version": "0.0.0",
-  "module": "index.ts",
+  "description": "402Auth is the infrastructure layer that ERC-8004 and Coinbase 402 need to actually work at internet scale.",
+  "author": "Meek Msaki",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "type": "module",
+  "module": "index.ts",
+  "keywords": [
+    "402",
+    "Auth"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "homepage": "https://github.com/mmsaki/402Auth",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmsaki/402Auth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mmsaki/402Auth/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "publish": "bun run build && bun publish --access public",
+    "format": "bun biome format --write"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
